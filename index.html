@@ -6,31 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>Mine sweeper</title>
 </head>
 
-<body oncontextmenu="return false;" onload="init()">
-    <h3>Mine Sweeper</h3> 
+<body oncontextmenu="return false" onload="init()">
+    <h1>Mine Sweeper</h1>
     <div class="Levels">
-        <p>Choose level</p>
-        <label><b>Beginner</b><input type="radio" data-inside="4" checked="checked" name="radio"
-                onclick="chooseBoardSize(this)" value="2" />
+        <span >Choose level</span><br>
+        <label><b>Beginner</b><input type="radio" name="level" data-inside="4" data-lives="1" checked="checked" name="radio"
+            onclick="chooseBoardSize(this)" data-mines="2" />
         </label>
         <label>
-            <b>Medium</b> <input type="radio" data-inside="8" name="radio" onclick="chooseBoardSize(this)" value="12">
+            <b>Medium</b> <input type="radio" name="level" data-inside="8" data-lives="3" name="radio"
+            onclick="chooseBoardSize(this)" data-mines="12">
         </label>
         <label><b>Expert!</b>
-            <input type="radio" data-inside="12" name="radio" onclick="chooseBoardSize(this)" value="30" />
+            <input type="radio" name="level" data-inside="12" data-lives="3" name="radio" onclick="chooseBoardSize(this)"
+            data-mines="30" />
         </label>
     </div>
-    <div class="timer">Time: 00:000</div>
-    
-    
+    <div><span class="lives"></span><span class="hints" onclick="useHint()">Hints</span></div>
+    <div class="timer">Time: 00:00:000</div>
+    <div onclick="init()" class="start-button"></div>
     <table>
         <tbody class="board-container"></tbody>
     </table>
-    <div class="modal"></div>
-    <script src="js/util.js"></script>
+    <div class="footer-container">
+        <div class="footer">Tal ekroni&copy;</div>
+    </div>
+    <script src="js/util.js"></script> 
     <script src="js/main.js"></script>
 </body>
 

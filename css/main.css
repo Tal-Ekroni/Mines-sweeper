@@ -1,46 +1,72 @@
 body {
     background-color: #14181f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
+
+h1 {
+    margin-top: 1px;
+    line-height: auto;
+    font-family: 'Mr Dafoe';
+    text-align: center;
+    font-size: 50px;
+    color: rgb(68, 90, 110);
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #0509fe, 0 0 0.3em #404cf5;
+    display: inline-block;
+}
+
 table {
     margin: auto;
 }
+
+.board-container td:hover {
+    box-shadow: inset 1px 1px 1px black;
+}
+.clicked {
+    /* box-shadow: inset 1px 1px 1px black !important; */
+    background-color: rgb(63, 64, 66) !important;
+    background: linear-gradient(to top, #30548f, #30548f, #30548f, #30548f, #30548f, #30548f, #30548f) !important;
+}
 .board-container td {
-    padding: 20px;
     box-shadow: 0 0 25px rgba(138, 144, 235, 0.5);
     border: 1px solid black;
     border-radius: 15px;
     background-color: rgb(197, 222, 255);
     font-weight: bold;
     font-family: 'Arial Narrow';
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     text-align: center;
     background: linear-gradient(to top, #5e94f7, #5e94f7, #5e94f7, #5e94f7, #5e94f7, #6498f7, #6c9ffd);
 }
-h3 {
-    margin-top: 5px;
-    font-family: 'Mr Dafoe';
-    text-align: center;
-    font-size: 3em;
-    color: rgb(68, 90, 110);
-    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #0509fe, 0 0 0.3em #404cf5;
-}
-div p {
-   text-align: center;
-   color: wheat;
-   font-weight: bold;
-}
-div,label,p {
-    margin-bottom: 5px;
+.Levels, .timer {
     color: wheat;
-    
+    text-align: center;
 }
-.modal {
-    background-color: rgb(15, 15, 34);
-    display: none;
-    top:10px;
-    right: 10px;
-    padding: 5px;
-    width: 300px;
+.start-button {
+    margin: auto;
+    cursor: pointer;
+    font-size: 40px;
+    background-color: #14181f;
+    margin-bottom: 10px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    ;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.lives {
+    color: wheat;
+    margin-right: 15px;
+}
+.hints {
+    color: wheat;
+    margin-right: 5px;
+}
+.showMines {
+    background: linear-gradient(to top, #f75e5e, #f75e5e, #f75e5e, #f75e5e, #f75e5e, #f75e5e, #f75e5e) !important;
 }
